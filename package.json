@@ -1,0 +1,55 @@
+{
+  "name": "leerob.io",
+  "description": "My personal website.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Lee Robinson",
+    "email": "me@leerob.io",
+    "url": "https://leerob.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leerob/leerob.io.git"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "lint": "eslint . --ext .json --ext .js",
+    "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,mjs,yml}\"",
+    "start": "next start",
+    "test": "yarn lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,js,json,md,mdx,mjs,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.5.2",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "@mapbox/rehype-prism": "^0.4.0",
+    "@mdx-js/loader": "^1.5.7",
+    "@next/mdx": "^9.3.1",
+    "date-fns": "^2.11.0",
+    "emotion-theming": "^10.0.27",
+    "mdx-prism": "^0.3.1",
+    "next": "^9.1.7",
+    "next-compose-plugins": "^2.2.0",
+    "next-mdx-enhanced": "^2.4.0",
+    "next-optimized-images": "^2.5.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.1",
+    "rehype": "9.0.1"
+  }
+}
