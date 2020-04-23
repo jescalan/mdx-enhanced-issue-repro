@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default (frontMatter) => {
-  return <div>{'hi'}</div>;
-};
+export default function Layout(frontMatter) {
+  return ({ children: content }) => {
+    return <div>{content}</div>;
+  };
+}
